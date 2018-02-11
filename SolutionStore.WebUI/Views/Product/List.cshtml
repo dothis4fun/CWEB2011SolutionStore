@@ -1,0 +1,17 @@
+﻿@model SolutionStore.WebUI.Models.ProductsListViewModel
+
+@{
+    ViewBag.Title = "Products";
+}
+
+@foreach (var p in Model.Products)
+{
+    @Html.Partial("ProductSummary", p)
+}
+
+<div class="text-center">
+    <div class="btn-group">
+
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory, system = Model.CurrentSystem }))
+    </div>
+</div>

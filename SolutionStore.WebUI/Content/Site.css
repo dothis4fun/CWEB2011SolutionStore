@@ -1,0 +1,16 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    min-height:100%;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
